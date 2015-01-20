@@ -7,7 +7,10 @@
     "wp-yaml": "index.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
+  },
+  "files": {
+    "index.js"
   },
   "author": "Alex Robertson <alex@someoddpilot.com>",
   "license": "ISC",
@@ -17,7 +20,14 @@
     "js-yaml": "^3.2.5"
   },
   "devDependencies": {
+    "blanket": "^1.1.6",
     "chai": "^1.10.0",
     "mocha": "^2.1.0"
+  },
+  "config": {
+    "blanket": {
+      "pattern": "index.js",
+      "data-cover-never": "node_modules"
+    }
   }
 }
