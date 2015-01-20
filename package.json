@@ -1,0 +1,21 @@
+{
+  "name": "wp-yaml",
+  "version": "1.0.0",
+  "description": "A utility to convert yaml data into a Wordpress XML import",
+  "main": "index.js",
+  "bin": {
+    "wp-yaml": "index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alex Robertson <alex@someoddpilot.com>",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^1.10.0",
+    "commander": "^2.6.0",
+    "handlebars": "^2.0.0",
+    "js-yaml": "^3.2.5",
+    "mocha": "^2.1.0"
+  }
+}

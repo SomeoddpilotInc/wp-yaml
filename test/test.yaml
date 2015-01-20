@@ -1,0 +1,9 @@
+title: Test Blog
+items:
+  - title: Hello World
+    slug: hello-world
+    postType: post
+    content: |
+      <h2>Hello my darlings</h2>
+
+      <p>This is a test</p>
