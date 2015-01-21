@@ -10,9 +10,9 @@
   "scripts": {
     "test": "mocha"
   },
-  "files": {
+  "files": [
     "index.js"
-  },
+  ],
   "author": "Alex Robertson <alex@someoddpilot.com>",
   "license": "ISC",
   "dependencies": {
