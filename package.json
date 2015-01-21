@@ -19,7 +19,10 @@
     "wp",
     "wordpress",
     "yaml",
-    "cli"
+    "cli",
+    "xml",
+    "import",
+    "export"
   ],
   "author": "Alex Robertson <alex@someoddpilot.com>",
   "license": "ISC",
