@@ -24,3 +24,28 @@ By default the command will output to stdout. If you want to write directly to a
 ```bash
 wp-yaml parse -i test/test.yaml -o result.xml
 ```
+
+Supported Fields:
+
+```
+title: Site Title
+link: http://www.example.com
+description: Just a Wordpress Site
+date: Tue, 21 Jan 2015 12:00:00 +0000
+siteUrl: http://www.example.com
+blogUrl: http://www.example.com
+items:
+  - title: Hello World
+    slug: hello-world
+    date: Tue, 21 Jan 2015 12:00:00 +0000
+    postType: post
+    description: Example post
+    excerpt: Hello my darlings.
+    content: |
+      <h2>Hello my darlings</h2>
+
+      <p>This is a test</p>
+    categories:
+      - name: Example Category
+        nicename: example-category
+```
