@@ -15,19 +15,19 @@ npm install -g wp-yaml
 
 To transform a YAML file, pass a file path:
 
-```bash
+```
 wp-yaml parse -i test/test.yaml
 ```
 
 By default the command will output to stdout. If you want to write directly to a file, you can pass an output path:
 
-```bash
+```
 wp-yaml parse -i test/test.yaml -o result.xml
 ```
 
 Supported Fields:
 
-```
+```YAML
 title: Site Title
 link: http://www.example.com
 description: Just a Wordpress Site
