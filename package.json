@@ -1,6 +1,7 @@
 {
   "name": "wp-yaml",
   "version": "1.0.0",
+  "repository": "https://github.com/alexsomeoddpilot/wp-yaml",
   "description": "A utility to convert yaml data into a Wordpress XML import",
   "main": "index.js",
   "bin": {
