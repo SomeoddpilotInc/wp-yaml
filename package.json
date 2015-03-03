@@ -41,5 +41,9 @@
       "pattern": "index.js",
       "data-cover-never": "node_modules"
     }
-  }
+  },
+  "engines": {
+    "node": ">=0.10"
+  },
+  "homepage": "https://travis-ci.org/alexsomeoddpilot/wp-yaml"
 }
