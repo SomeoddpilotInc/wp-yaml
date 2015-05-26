@@ -23,28 +23,26 @@ function readFilePromise(filepath) {
   });
 }
 
-function readYAMLFile(contents, done) {
-  var data = yaml.safeLoad(contents);
+function getTemplate() {
+  return readFilePromise(path.join(__dirname, "template.xml"));
+}
 
-  readFilePromise(path.join(__dirname, "template.xml"))
-    .then(function (templateString) {
-      var templateFn = handlebars.compile(templateString);
+function convert(filepath, done) {
+  readFilePromise(path.resolve(filepath))
+    .then(function (contents) {
+      var data = yaml.safeLoad(contents);
 
-      done(templateFn(data));
+      return getTemplate()
+        .then(function (templateString) {
+          return handlebars.compile(templateString)(data);
+        });
+    })
+    .then(function (xml) {
+      done(xml);
     })
     .catch(function (err) {
       throw err;
     });
-}
-
-function convert(filepath, done) {
-  fs.readFile(path.resolve(filepath), "utf-8", function (err, contents) {
-    if (err) {
-      throw err;
-    }
-
-    readYAMLFile(contents, done);
-  });
 }
 
 function comandlineDone(output) {
