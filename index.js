@@ -11,16 +11,30 @@ program
   .option("-i, --input <path>", "Input file path")
   .option("-o, --output <path>", "Output file path");
 
+function readFilePromise(filepath) {
+  return new Promise(function (resolve, reject) {
+    fs.readFile(filepath, 'utf-8', function (err, contents) {
+      if (err) {
+        reject(err);
+        return;
+      }
+      resolve(contents);
+    });
+  });
+}
+
 function readYAMLFile(contents, done) {
   var data = yaml.safeLoad(contents);
 
-  var safePath = path.join(__dirname, "template.xml");
+  readFilePromise(path.join(__dirname, "template.xml"))
+    .then(function (templateString) {
+      var templateFn = handlebars.compile(templateString);
 
-  var templateString = fs.readFileSync(safePath, "utf-8");
-
-  var templateFn = handlebars.compile(templateString);
-
-  done(templateFn(data));
+      done(templateFn(data));
+    })
+    .catch(function (err) {
+      throw err;
+    });
 }
 
 function convert(filepath, done) {
