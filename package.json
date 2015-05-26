@@ -27,6 +27,7 @@
   "author": "Alex Robertson <alex@someoddpilot.com>",
   "license": "ISC",
   "dependencies": {
+    "bluebird": "^2.9.26",
     "commander": "^2.6.0",
     "handlebars": "^3.0.0",
     "js-yaml": "^3.2.5"

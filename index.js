@@ -5,6 +5,7 @@ var path = require("path");
 var yaml = require("js-yaml");
 var handlebars = require("handlebars");
 var program = require("commander");
+var Promise = require('bluebird');
 
 program
   .version("1.0.0")
